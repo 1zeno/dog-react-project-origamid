@@ -16,15 +16,7 @@ const Header = () => {
                 >
                     <Dogs />
                 </Link>
-                {
-                    data ? (
-                        <>
-                            <Link className={styles.login} to="/login">{data.nome}</Link>
-                            <button onClick={userLogout}>logout</button>
-                        </>
-                    ) : (
-                    <Link className={styles.login} to="/login">Login / Criar</Link>
-                )}
+                <Link className={styles.login} to="/login">{data ? data.nome : "Login / Criar"}</Link>
             </nav>
         </header>
     )
